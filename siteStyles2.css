@@ -4,18 +4,20 @@ body {
 }
 
 #wrapper {
-	max-width: 960px;
+	width: 80%;
 	margin: 0 auto;
 	background-color: #fff;
 	padding: 32px;
+	position: relative;
 
 }
 
 header {
+	
 	background-color: #59d5d8;
 	height: 150px;
 	padding: 4px;
-}
+	}
 
 header h1 {
 	text-transform: uppercase;
@@ -31,13 +33,16 @@ header h2 {
 }
 
 .navigation {
-	padding: 5px 0 5px 0;
+	
+	padding: 5px 4px 5px 4px;
 	text-align: center;
 	line-height: 32px;
 	background-color: #818181;
+	
 }
 
 .navigation li {
+	border-right: 1px solid white;
 	display: inline;
 	padding: 0 10px 0 10px;
 	font-size: 16px;
@@ -46,7 +51,7 @@ header h2 {
 .navigation a {
 	text-decoration: none;
 	color: #fff;
-	padding: 8px;
+	padding: 5px;
 	font-variant: small-caps;
 }
 
@@ -54,7 +59,8 @@ header h2 {
 	color: #59d5d8;
 }
 
-.myimage {
+.mypic {
+	max-width: 100%;
 	border-radius: 50%;
 	float: left;
 	margin-right: 10px;
@@ -72,16 +78,21 @@ header h2 {
 	float: right;
 }
 
-section {
-	margin-top: 20px;
-}
-
 section h3 {
 	color: #59d5d8;
 }
 
+section .desc  {
+	color: black;
+}
+
+.info {
+	text-align: left;
+	margin-top: 20px;
+}
+
+
 .desc {
-	color: #59d5d8;
 	clear: left;
 	padding-top: 15px;
 }
@@ -96,7 +107,36 @@ section h3 {
 }
 
 footer {
+	text-align: center;
 	background-color: #59d5d8;
 	height: 40px;
 	padding: 4px;
+}
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------
+*/
+/* IPhones */
+@media only screen and (max-width: 600px) {
+	
+	.mypic {
+		display: block;
+		max-width: 100%;
+		border-radius: 50%;
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	section.info {
+		text-align: center;
+		margin-top: 20px;
+
+	}
+
+	.desc {
+		clear: left;
+		padding-top: 5px;
+	}
 }
